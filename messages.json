@@ -1,0 +1,6 @@
+[
+  {
+    "role": "user",
+    "content": "The deployment failed with the following error from Fly.io:\n\n[ERROR] Deployment failed for 'hst-ai-b4a4be60-ed5a-461a-b01b-edd618f5715e'. Exit code: 1\n\nPlease fix the issue."
+  }
+]
