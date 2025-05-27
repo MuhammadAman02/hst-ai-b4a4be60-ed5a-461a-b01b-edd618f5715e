@@ -8,159 +8,137 @@ export const mockProducts: Product[] = [
     price: 3200,
     originalPrice: 4000,
     discount: 20,
-    description: 'Exquisite silk evening gown with intricate beadwork and flowing silhouette. Perfect for special occasions.',
-    images: [
-      'https://images.unsplash.com/photo-1566479179817-c0e8b4b4b2d5?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=600&fit=crop'
-    ],
+    description: 'An exquisite silk evening gown featuring intricate beadwork and a flowing silhouette. Perfect for special occasions and formal events.',
     category: 'women',
-    subcategory: 'dresses',
+    images: [
+      'https://images.unsplash.com/photo-1566479179817-c0e8e0b0b5e7?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500&h=600&fit=crop'
+    ],
     sizes: ['XS', 'S', 'M', 'L'],
     colors: ['Black', 'Navy', 'Burgundy'],
     rating: 4.8,
-    reviews: 24,
+    reviews: 124,
     isNew: true,
-    inStock: true,
-    tags: ['evening', 'formal', 'silk']
+    isFeatured: true
   },
   {
     id: '2',
     name: 'Cashmere Overcoat',
-    brand: 'Tom Ford',
+    brand: 'Burberry',
     price: 2800,
-    description: 'Luxurious cashmere overcoat with tailored fit and premium construction.',
-    images: [
-      'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=600&fit=crop'
-    ],
+    description: 'Luxurious cashmere overcoat with classic tailoring and timeless design. Features horn buttons and silk lining.',
     category: 'men',
-    subcategory: 'outerwear',
+    images: [
+      'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop'
+    ],
     sizes: ['S', 'M', 'L', 'XL'],
-    colors: ['Charcoal', 'Navy', 'Camel'],
+    colors: ['Camel', 'Navy', 'Charcoal'],
     rating: 4.9,
-    reviews: 18,
-    isNew: false,
-    inStock: true,
-    tags: ['cashmere', 'formal', 'winter']
+    reviews: 89,
+    isFeatured: true
   },
   {
     id: '3',
-    name: 'Designer Handbag',
-    brand: 'Hermès',
-    price: 8500,
-    description: 'Iconic leather handbag crafted from the finest materials with impeccable attention to detail.',
-    images: [
-      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=600&fit=crop'
-    ],
+    name: 'Diamond Tennis Bracelet',
+    brand: 'Tiffany & Co.',
+    price: 12500,
+    description: 'Stunning diamond tennis bracelet featuring brilliant-cut diamonds set in platinum. A timeless piece of luxury jewelry.',
     category: 'accessories',
-    subcategory: 'bags',
+    images: [
+      'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=500&h=600&fit=crop'
+    ],
     sizes: ['One Size'],
-    colors: ['Black', 'Brown', 'Tan'],
+    colors: ['Platinum', 'White Gold'],
     rating: 5.0,
-    reviews: 42,
-    isNew: false,
-    inStock: true,
-    tags: ['leather', 'luxury', 'handbag']
+    reviews: 45,
+    isNew: true
   },
   {
     id: '4',
-    name: 'Tailored Blazer',
-    brand: 'Giorgio Armani',
-    price: 1800,
-    description: 'Perfectly tailored blazer in premium wool with modern cut and classic styling.',
+    name: 'Designer Handbag',
+    brand: 'Hermès',
+    price: 8900,
+    description: 'Iconic leather handbag crafted from the finest materials. Features gold hardware and signature design elements.',
+    category: 'accessories',
     images: [
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=600&fit=crop'
+      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=600&fit=crop'
     ],
-    category: 'women',
-    subcategory: 'blazers',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    colors: ['Black', 'Navy', 'Gray'],
+    sizes: ['One Size'],
+    colors: ['Black', 'Brown', 'Tan'],
     rating: 4.7,
-    reviews: 31,
-    isNew: true,
-    inStock: true,
-    tags: ['wool', 'tailored', 'professional']
+    reviews: 156,
+    isFeatured: true
   },
   {
     id: '5',
-    name: 'Luxury Watch',
-    brand: 'Rolex',
-    price: 12000,
-    description: 'Swiss-made luxury timepiece with automatic movement and sapphire crystal.',
+    name: 'Cocktail Dress',
+    brand: 'Chanel',
+    price: 4200,
+    description: 'Elegant cocktail dress with classic Chanel styling. Features tweed fabric and signature chain details.',
+    category: 'women',
     images: [
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=600&fit=crop'
+      'https://images.unsplash.com/photo-1566479179817-c0e8e0b0b5e7?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=600&fit=crop'
     ],
-    category: 'accessories',
-    subcategory: 'watches',
-    sizes: ['One Size'],
-    colors: ['Gold', 'Silver', 'Rose Gold'],
-    rating: 4.9,
-    reviews: 67,
-    isNew: false,
-    inStock: true,
-    tags: ['swiss', 'automatic', 'luxury']
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['Black', 'Pink', 'White'],
+    rating: 4.6,
+    reviews: 78,
+    isNew: true
   },
   {
     id: '6',
-    name: 'Silk Scarf',
-    brand: 'Chanel',
-    price: 450,
-    description: 'Hand-rolled silk scarf with signature print and luxurious feel.',
+    name: 'Tailored Suit',
+    brand: 'Tom Ford',
+    price: 3800,
+    description: 'Impeccably tailored suit crafted from premium wool. Features modern cut and attention to detail.',
+    category: 'men',
     images: [
-      'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=600&fit=crop'
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=600&fit=crop'
     ],
-    category: 'accessories',
-    subcategory: 'scarves',
-    sizes: ['One Size'],
-    colors: ['Pink', 'Blue', 'Gold'],
-    rating: 4.6,
-    reviews: 15,
-    isNew: true,
-    inStock: true,
-    tags: ['silk', 'printed', 'accessory']
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['Navy', 'Charcoal', 'Black'],
+    rating: 4.8,
+    reviews: 92,
+    isFeatured: true
   },
   {
     id: '7',
-    name: 'Leather Boots',
-    brand: 'Christian Louboutin',
-    price: 1200,
-    description: 'Handcrafted leather boots with signature red sole and elegant design.',
+    name: 'Luxury Watch',
+    brand: 'Rolex',
+    price: 15000,
+    description: 'Prestigious luxury watch with automatic movement and sapphire crystal. A symbol of excellence and precision.',
+    category: 'accessories',
     images: [
-      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=600&fit=crop'
+      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1594576662059-6f4ac6c4d8b7?w=500&h=600&fit=crop'
     ],
-    category: 'women',
-    subcategory: 'shoes',
-    sizes: ['35', '36', '37', '38', '39', '40'],
-    colors: ['Black', 'Brown', 'Nude'],
-    rating: 4.8,
-    reviews: 28,
-    isNew: false,
-    inStock: true,
-    tags: ['leather', 'boots', 'designer']
+    sizes: ['One Size'],
+    colors: ['Gold', 'Silver', 'Rose Gold'],
+    rating: 4.9,
+    reviews: 234,
+    isNew: true
   },
   {
     id: '8',
-    name: 'Dress Shirt',
-    brand: 'Brunello Cucinelli',
-    price: 650,
-    description: 'Premium cotton dress shirt with mother-of-pearl buttons and perfect fit.',
+    name: 'Silk Blouse',
+    brand: 'Saint Laurent',
+    price: 1200,
+    description: 'Luxurious silk blouse with elegant draping and sophisticated design. Perfect for both office and evening wear.',
+    category: 'women',
     images: [
-      'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=600&fit=crop'
+      'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop'
     ],
-    category: 'men',
-    subcategory: 'shirts',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: ['White', 'Light Blue', 'Pink'],
-    rating: 4.7,
-    reviews: 22,
-    isNew: true,
-    inStock: true,
-    tags: ['cotton', 'formal', 'dress shirt']
+    sizes: ['XS', 'S', 'M', 'L'],
+    colors: ['White', 'Black', 'Cream'],
+    rating: 4.5,
+    reviews: 67,
+    isFeatured: true
   }
 ];
