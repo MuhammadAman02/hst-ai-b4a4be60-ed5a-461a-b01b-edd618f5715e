@@ -1,75 +1,60 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
 
 interface User {
   id: string;
   email: string;
-  name: string;
+  firstName: string;
+  lastName: string;
 }
 
 interface AuthState {
-  user: User | null;
   isAuthenticated: boolean;
+  user: User | null;
 }
 
-interface AuthContextType {
+type AuthAction =
+  | { type: 'LOGIN'; payload: User }
+  | { type: 'LOGOUT' };
+
+const AuthContext = createContext<{
   state: AuthState;
-  login: (email: string, password: string) => Promise<boolean>;
-  signup: (email: string, password: string, name: string) => Promise<boolean>;
+  login: (user: User) => void;
   logout: () => void;
-}
+} | null>(null);
 
-const AuthContext = createContext<AuthContextType | null>(null);
+const authReducer = (state: AuthState, action: AuthAction): AuthState => {
+  switch (action.type) {
+    case 'LOGIN':
+      return {
+        isAuthenticated: true,
+        user: action.payload,
+      };
+    case 'LOGOUT':
+      return {
+        isAuthenticated: false,
+        user: null,
+      };
+    default:
+      return state;
+  }
+};
 
-export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [state, setState] = useState<AuthState>({
-    user: null,
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [state, dispatch] = useReducer(authReducer, {
     isAuthenticated: false,
+    user: null,
   });
 
-  const login = async (email: string, password: string): Promise<boolean> => {
-    // Simulate API call
-    console.log('Login attempt:', { email, password });
-    
-    // Mock successful login
-    if (email && password) {
-      const user = {
-        id: '1',
-        email,
-        name: email.split('@')[0],
-      };
-      
-      setState({ user, isAuthenticated: true });
-      return true;
-    }
-    
-    return false;
-  };
-
-  const signup = async (email: string, password: string, name: string): Promise<boolean> => {
-    // Simulate API call
-    console.log('Signup attempt:', { email, password, name });
-    
-    // Mock successful signup
-    if (email && password && name) {
-      const user = {
-        id: '1',
-        email,
-        name,
-      };
-      
-      setState({ user, isAuthenticated: true });
-      return true;
-    }
-    
-    return false;
+  const login = (user: User) => {
+    dispatch({ type: 'LOGIN', payload: user });
   };
 
   const logout = () => {
-    setState({ user: null, isAuthenticated: false });
+    dispatch({ type: 'LOGOUT' });
   };
 
   return (
-    <AuthContext.Provider value={{ state, login, signup, logout }}>
+    <AuthContext.Provider value={{ state, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
@@ -82,4 +67,3 @@ export const useAuth = () => {
   }
   return context;
 };
-</AuthContext.Provider>
